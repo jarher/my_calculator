@@ -35,7 +35,7 @@
         <div id="respuesta"></div>
       </div>
 
-      <button type="button" name="button" id="x^3">x^3</button>
+      <button type="button" name="button" id="sine">sine</button>
     </div>
 
 
@@ -43,13 +43,13 @@
 
   <script type="text/javascript">
 
-    var boton_1 = document.getElementById('x^3')
-    boton_1.addEventListener('click', pow3)
+    var boton_1 = document.getElementById('sine')
+    boton_1.addEventListener('click', sine)
 
-    function pow3(number){
+    function sine(number){
       var number = document.getElementById('number').value;
       var respuesta = document.getElementById('respuesta');
-      respuesta.innerHTML = Math.pow(number,3)
+      respuesta.innerHTML = Math.sin(number)
 
     }
 
