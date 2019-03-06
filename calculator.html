@@ -34,7 +34,7 @@
       <div class="contenedor_resp">
         <div id="respuesta"></div>
       </div>
-
+      <button type="button" name="button" id="x^4">x^4</button>
       <button type="button" name="button" id="sine">sine</button>
     </div>
 
@@ -43,10 +43,20 @@
 
   <script type="text/javascript">
 
-    var boton_1 = document.getElementById('sine')
-    boton_1.addEventListener('click', sine)
+    var boton_2 = document.getElementById('x^4')
+    boton_2.addEventListener('click', pow4)
 
-    function sine(number){
+    var boton_3 = document.getElementById('sine')
+    boton_3.addEventListener('click', sine)
+
+    function pow4(){
+      var number = document.getElementById('number').value;
+      var respuesta = document.getElementById('respuesta');
+      respuesta.innerHTML = Math.pow(number,4)
+
+    }
+
+    function sine(){
       var number = document.getElementById('number').value;
       var respuesta = document.getElementById('respuesta');
       respuesta.innerHTML = Math.sin(number)
