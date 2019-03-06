@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>calculator</title>
+    <style media="screen">
+    .contenedor{
+      width: 20%;
+      padding: 1%
+    }
+      #respuesta{
+        position: relative;
+        display: block;
+        padding: 5%;
+        text-align:center;
+      }
+      .contenedor_resp{
+          border: 1px solid #0ee0e0;
+          position: relative;
+          height: 40px;
+          margin: 1% 0 5% 0
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="contenedor">
+      <h1>calculator</h1>
+      <fieldset>
+        <label for="number">Number</label>
+        <input type="text" name="number" value="0" id="number">
+      </fieldset>
+      <h2>resultado</h2>
+      <div class="contenedor_resp">
+        <div id="respuesta"></div>
+      </div>
+
+      <button type="button" name="button" id="x^3">x^3</button>
+    </div>
+
+
+  </body>
+
+  <script type="text/javascript">
+
+    var boton_1 = document.getElementById('x^3')
+    boton_1.addEventListener('click', pow3)
+
+    function pow3(number){
+      var number = document.getElementById('number').value;
+      var respuesta = document.getElementById('respuesta');
+      respuesta.innerHTML = Math.pow(number,3)
+
+    }
+
+  </script>
+</html>
